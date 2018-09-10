@@ -93,4 +93,10 @@ public interface PropertyDescriptor
      * @since 4.2M1
      */
     Field getField();
+
+    /**
+     * @return indicates if the content can be edited inline with the WYSIWYG editor.
+     * @since 10.8-rc-1
+     */
+    boolean supportsInlineEdition();
 }

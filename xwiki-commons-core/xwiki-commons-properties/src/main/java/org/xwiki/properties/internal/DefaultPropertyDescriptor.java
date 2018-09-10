@@ -81,6 +81,12 @@ public class DefaultPropertyDescriptor implements PropertyDescriptor
      */
     private Method writeMethod;
 
+    /**
+     * @see #supportsInlineEdition()
+     * @since 10.8-rc-1
+     */
+    private boolean supportsInlineEdition;
+
     @Override
     public String getId()
     {
@@ -209,6 +215,20 @@ public class DefaultPropertyDescriptor implements PropertyDescriptor
     public Field getField()
     {
         return this.field;
+    }
+
+    @Override
+    public boolean supportsInlineEdition()
+    {
+        return this.supportsInlineEdition;
+    }
+
+    /**
+     * @param supportsInlineEdition indicates if the property can be edited inline with the WYSIWYG editor
+     * @since 10.8-rc-1
+     */
+    public void setSupportsInlineEdition(boolean supportsInlineEdition) {
+        this.supportsInlineEdition = supportsInlineEdition;
     }
 
     /**

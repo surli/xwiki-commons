@@ -60,6 +60,7 @@ public class DefaultBeanDescriptorTest
         Assert.assertNotNull(lowerPropertyDescriptor.getWriteMethod());
         Assert.assertNotNull(lowerPropertyDescriptor.getReadMethod());
         Assert.assertNull(lowerPropertyDescriptor.getField());
+        Assert.assertFalse(lowerPropertyDescriptor.supportsInlineEdition());
 
         PropertyDescriptor prop1Descriptor = this.beanDescriptor.getProperty("prop1");
 
